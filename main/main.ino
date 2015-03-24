@@ -4,10 +4,13 @@
   Outputs the results of a temperature-humidity sensor and a pressure-altitude
   sensor on a 4D Systems ÂµLCD-32PTU touchscreen, written for an Arduino Uno.
   
+  Sensors communicate with Arduino using I2C; Arduino Uno as master, sensors 
+  as slave mode.
+  
  */
 
-//#include <Wire.h>
 #include "MPL3115A2.h"
+#include "HIH6130.h"
 #include "Wire.h"
 
 MPL3115A2 myPressure;
