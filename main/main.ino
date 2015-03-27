@@ -45,8 +45,11 @@ void loop()
   Serial.print(pressure, 2);
 
   float temperature = myPressure.readTempF();
+  float humidity;
+  fetch_humidity_temperature(&humidity,&temperature);
   Serial.print(" Temp(f):");
   Serial.print(temperature, 2);
+  delay 1000;
 
   //References: 
   //Definition of "altimeter setting": http://www.crh.noaa.gov/bou/awebphp/definitions_pressure.php
@@ -85,7 +88,9 @@ void loop()
  
  
 double readThermometer() {
-
+  //unsigned int temp;
+  //fetch_humidity_temperature(temp);
+  //return temp;
 }
 
 double readHygrometer(){
